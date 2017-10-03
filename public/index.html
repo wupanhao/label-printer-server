@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>label printer server</title>
+   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+
+<div class="container">
+   <div class="row" >
+      <h6 id="allert"></h6>
+
+      <h1>label printer server<small> Powered by : Ekinghao </small></h1>
+      <!-- <a href="/qr_with_text">test</a> -->
+      <form action="/qr_with_text">
+        qrcode and text
+        <input type="text" name="value" class="form-control" placeholder="qrcode value" required>
+        <input type="text" name="text" maxlength="26" class="form-control" placeholder="text below" required>
+        <input type="submit" class="btn btn-primary">
+      </form >
+
+      <form action="/all_text">
+        all_text
+        <input type="text" name="text" maxlength="26" class="form-control" placeholder="text" required>
+        <input type="submit" class="btn btn-primary">
+
+      </form>
+
+      <form action="/qr_x4">
+        qrcode x 4
+        <input type="text" name="value" class="form-control" placeholder="qrcode value" required>
+        <input type="text" name="text" maxlength="26" class="form-control" placeholder="text below">
+        <input type="submit" class="btn btn-primary">
+      </form>
+
+      <form action="/poems">
+        poems
+        <input type="text" name="title" class="form-control" maxlength="26" placeholder="title" required>
+        <input type="text" name="content" class="form-control" placeholder="content" required>
+        <input type="submit" class="btn btn-primary">
+      </form>
+      <form action="/lyric">
+        lyric
+        <input type="text" name="title" class="form-control" maxlength="26" placeholder="title" required>
+        <input type="text" name="first" class="form-control" placeholder="first half" required>
+        <input type="text" name="second" class="form-control" placeholder="second half" required>
+        <input type="submit" class="btn btn-primary">
+      </form>
+   </div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

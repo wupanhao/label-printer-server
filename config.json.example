@@ -1,0 +1,11 @@
+{
+
+"mysql":{
+  "host"     : "xx.xx.xx.xx",
+  "user"     : "user",
+  "password" : "passwd",
+  "database" : "your db"
+}
+
+}
+
