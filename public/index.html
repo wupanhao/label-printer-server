@@ -16,24 +16,39 @@
 
       <h1>label printer server<small> Powered by : Ekinghao </small></h1>
       <!-- <a href="/qr_with_text">test</a> -->
+      <ul>
+        <h2>说明</h2>
+        <li>款式一：一张大的二维码配上一行文字</li>
+        <li>款式二：四份小的二维码</li>
+        <li>款式三：六行12个字以内的文本</li>
+        更多款式待开发，也可以向开发人员(北师信科 吴畔昊 18810285808)提出宝贵的建议～
+        <h2>Demo Picture</h2>
+        <img class="img-rounded" style="max-height: 300px" src="http://ot83d8b2f.bkt.clouddn.com/17-10-16/11365811.jpg"/>
+      </ul>
+
+
+
       <form action="/qr_with_text">
-        qrcode and text
+        款式一:qrcode and text
         <input type="text" name="value" class="form-control" placeholder="qrcode value" required>
         <input type="text" name="text" maxlength="26" class="form-control" placeholder="text below" required>
+        <input type="text" name="comment" maxlength="26" class="form-control" placeholder="备注" >
         <input type="submit" class="btn btn-primary">
       </form >
 
-      <form action="/all_text">
-        all_text
-        <input type="text" name="text" maxlength="26" class="form-control" placeholder="text" required>
-        <input type="submit" class="btn btn-primary">
-
-      </form>
 
       <form action="/qr_x4">
-        qrcode x 4
+        款式二:qrcode x 4
         <input type="text" name="value" class="form-control" placeholder="qrcode value" required>
         <input type="text" name="text" maxlength="26" class="form-control" placeholder="text below">
+        <input type="text" name="comment" maxlength="26" class="form-control" placeholder="备注" >
+        <input type="submit" class="btn btn-primary">
+      </form>
+
+      <form action="/all_text">
+        款式三:all_text
+        <input type="text" name="text" maxlength="26" class="form-control" placeholder="text" required>
+        <input type="text" name="comment" maxlength="26" class="form-control" placeholder="备注" >
         <input type="submit" class="btn btn-primary">
       </form>
 
@@ -41,6 +56,7 @@
         poems
         <input type="text" name="title" class="form-control" maxlength="26" placeholder="title" required>
         <input type="text" name="content" class="form-control" placeholder="content" required>
+        <input type="text" name="comment" maxlength="26" class="form-control" placeholder="备注" >
         <input type="submit" class="btn btn-primary">
       </form>
       <form action="/lyric">
@@ -48,6 +64,7 @@
         <input type="text" name="title" class="form-control" maxlength="26" placeholder="title" required>
         <input type="text" name="first" class="form-control" placeholder="first half" required>
         <input type="text" name="second" class="form-control" placeholder="second half" required>
+        <input type="text" name="comment" maxlength="26" class="form-control" placeholder="备注" >
         <input type="submit" class="btn btn-primary">
       </form>
    </div>

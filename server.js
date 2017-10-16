@@ -39,11 +39,12 @@ var res = "";
 function qr_with_text(req,res){
 	var value = req.query.value;
 	var text = req.query.text;
+	var comment = req.query.comment;
 	if(value && text){
 		r = JSON.stringify(lp.qr_with_text(value,text));
 		console.log(r);
-		q = "insert into print_task(data) values (?)";
-		db.query(q,[r],function(error, results, fields){
+		q = "insert into print_task(data,comment) values (?,?)";
+		db.query(q,[r,comment], function(error, results, fields){
 			res.send(handle(error,results));
 		});
 
@@ -55,11 +56,12 @@ function qr_with_text(req,res){
 function qr_x4(req,res){
 	var value = req.query.value;
 	var text = req.query.text;
+	var comment = req.query.comment;
 	if(value && text){
 		r = JSON.stringify(lp.qr_x4(value,text));
 		console.log(r);
-		q = "insert into print_task(data) values (?)";
-		db.query(q,[r],function(error, results, fields){
+		q = "insert into print_task(data,comment) values (?,?)";
+		db.query(q,[r,comment], function(error, results, fields){
 			res.send(handle(error,results));
 		});
 	}
@@ -69,11 +71,12 @@ function qr_x4(req,res){
 
 function all_text(req,res){
 	var text = req.query.text;
+	var comment = req.query.comment;
 	if(text){
 		r = JSON.stringify(lp.all_text(text));
 		console.log(r);
-		q = "insert into print_task(data) values (?)";
-		db.query(q,[r],function(error, results, fields){
+		q = "insert into print_task(data,comment) values (?,?)";
+		db.query(q,[r,comment], function(error, results, fields){
 			res.send(handle(error,results));
 		});
 	}
@@ -84,11 +87,12 @@ function all_text(req,res){
 function poems(req,res){
 	var title = req.query.title;
 	var content = req.query.content;
+	var comment = req.query.comment;
 	if(content && title){
 		r = JSON.stringify(lp.poems(title,content));
 		console.log(r);
-		q = "insert into print_task(data) values (?)";
-		db.query(q,[r],function(error, results, fields){
+		q = "insert into print_task(data,comment) values (?,?)";
+		db.query(q,[r,comment], function(error, results, fields){
 			res.send(handle(error,results));
 		});
 	}
@@ -100,11 +104,12 @@ function lyric(req,res){
 	var title = req.query.title;
 	var first_half = req.query.first;
 	var second_half = req.query.second;
+	var comment = req.query.comment;
 	if(first_half && second_half){
 		r = JSON.stringify(lp.lyric(title,first_half,second_half));
 		console.log(r);
-		q = "insert into print_task(data) values (?)";
-		db.query(q,[r], function(error, results, fields){
+		q = "insert into print_task(data,comment) values (?,?)";
+		db.query(q,[r,comment], function(error, results, fields){
 			res.send(handle(error,results));
 		});
 	}
